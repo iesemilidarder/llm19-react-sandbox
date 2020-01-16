@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- made by berto -->
+    <meta charset="UTF-8">
+    <title>DynaDOM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<h1>System users</h1>
+<ul id="myList">
+</ul>
+<script language="JavaScript">
+    console.log("fetching data");
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then(res => {
+                const base = document.getElementById("myList");
+                res.map(user => {
+                    const userName = user.username;
+                    console.log("adding user" + userName);
+                    let btn = document.createElement("li");
+                    btn.innerHTML = userName;
+                    base.appendChild(btn);
+                });
+            }
+        );
+</script>
+</body>
+</html>
