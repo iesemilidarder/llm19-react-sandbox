@@ -1,26 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <!-- made by berto -->
-    <meta charset="UTF-8">
-    <title>Let's kill students</title>
+  <head>
+    <meta charset="utf-8">
+    <title>Jumbotron Template · Bootstrap</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-</head>
-<body class="container">
-<div class="row">
-    <aside class="col-sm-3">
-        <button id="homeBtn">Home</button>
-        <button id="listBtn">List</button>
-    </aside>
-    <main class="col-sm-9" id="myContent">
-        <article><h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad, animi architecto consectetur culpa
-                delectus doloribus est exercitationem illo in minima placeat praesentium quibusdam quidem reprehenderit
-                temporibus vel velit voluptate?
-            </p>
-        </article>
-    </main>
-</div>
-<script src="bundle.js"></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <span class="navbar-brand">My web</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" id="bt1">Button1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="bt2">Button2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="bt3">Button3</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<main role="main">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Hello, world!</h1>
+      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" id="section1">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4" id="section2">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4" id="section3">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+    </div>
+    <hr>
+  </div>
+</main>
+<footer class="container">
+  <p>&copy; Company 2017-2019</p>
+</footer>
+<script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+<!--script src="bundle.js"></script-->
 </body>
 </html>
