@@ -12,7 +12,8 @@ function getElementById(id = "myId") {
         return document.getElementById(id);
     }
 }
-
+//let myvalue = getElementById("yuhu");
+//getElementById("yuhu").innerHtml = "toma castaña"
 /**
  * how can I write html in an dom element?
  * @param element the dom element (with same than getElementById)
@@ -20,7 +21,7 @@ function getElementById(id = "myId") {
  */
 function writeElement(element = window.document.body, content = "") {
     if (isJqueryEnabled) {
-        $(element).html(content);
+        $(element).html(content); // let value = $(element).html()
     } else {
         element.innerHTML = content;
     }
@@ -29,16 +30,16 @@ function writeElement(element = window.document.body, content = "") {
 /**
  *
  * @param url
- * @param whatToDoWichElement
+ * @param whatToDoWithElement
  */
-function getData(url = "http://dummy.restapiexample.com/api/v1/employees", whatToDoWichElement) {
+function getData(url = "http://dummy.restapiexample.com/api/v1/employees", whatToDoWithElement) {
     try {
         fetch(url)
             .then(data => data.json())
             .then(response => {
                 //check the url response. it has data values
                 response.data.map(item => {
-                    whatToDoWichElement(item);
+                    whatToDoWithElement(item);
                 });
             });
     } catch (e) {
@@ -66,9 +67,11 @@ function printTemplate(name,age,salary) {
  * throws previous fetch with templating!
  */
 function howtoUseFetch() {
+    window.content = "";
     getData(function (i) {
         console.log(i);
-        printTemplate(i.employee_name,);
-    })
+        window.content += printTemplate(i.employee_name,i.employee_age,i.employee_salary);
+    });
+    console.log(window.content);
 }
 

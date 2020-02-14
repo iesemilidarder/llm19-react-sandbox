@@ -1,4 +1,5 @@
 import $ from "jquery";
+//import {howtoUseFetch} from "./recipes";
 
 function printLine(id, username, password) {
     return `
@@ -11,6 +12,7 @@ function printLine(id, username, password) {
 }
 
 $(document).ready(function () {
+    //howtoUseFetch();
     //bindings
     $("#myBtn").click(function () {
         const numItems = $("#range").val();
