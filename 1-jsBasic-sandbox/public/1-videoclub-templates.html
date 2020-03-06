@@ -6,7 +6,7 @@
     <title>IMDB last movies</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
-<body class="container">
+<body class="container ">
 <header class="row">
     <div class="col-md-5">
         <img src="https://www.bing.com/th?id=OIP.v7hPdJFsWRVOggmqLFQ4VwHaHa&pid=Api&rs=1" alt="" width="50"
@@ -26,38 +26,29 @@
     </div>
 </main>
 <script>
-    function doClick(txt){
-        console.log("say:"+txt);
+    function doClick(txt) {
+        console.log("say:" + txt);
     }
+
     let createVideoCard = function (titleTxt, descriptionTxt) {
         //Let's create the card main div element with classname
+        let htmlContent = `
+    <img src="https://picsum.photos/80/50" alt="A pic" class="card-img-top"/>
+    <div class="card-body">
+        <h5 class="card-title">${titleTxt}</h5>
+        <p class="card-text">${descriptionTxt}</p>
+        <button onclick="doClick('${titleTxt}');">Click Me</button>
+    </div>
+        `;
         let card = document.createElement("div");
+        card.innerHTML = htmlContent;
         card.className = "col-md-3 card";
-        //The img element with picsum photo
-        let img = document.createElement("img");
-        img.className = "card-img-top";
-        img.src = "https://picsum.photos/80/50";
-        // The title element, setting the text
-        let title = document.createElement("h5");
-        title.className = "card-title";
-        title.innerText = titleTxt;
-        // Let's add the description element and the body
-        let description = document.createElement("p");
-        description.className = "card-text";
-        description.innerText = descriptionTxt;
-        let button = document.createElement("button");
-        button.innerText = "Click Me";
-        button.onclick = function(){
-            doClick(titleTxt);
+        card.onmouseenter = function () {
+            this.className = "col-md-3 card bg-success";
         };
-        let body = document.createElement("div");
-        body.className = "card-body";
-        // Let's build the tree
-        body.appendChild(title);
-        body.appendChild(description);
-        body.appendChild(button);
-        card.appendChild(img);
-        card.appendChild(body);
+        card.onmouseleave = function () {
+            this.className = "col-md-3 card";
+        };
         return card;
     };
     let cardHolderElem = document.getElementById("cardHolder");

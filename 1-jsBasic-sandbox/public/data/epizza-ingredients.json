@@ -1,0 +1,63 @@
+{
+  "base": [
+    {
+      "label": "Masa tradicizionalle",
+      "description": "Li amore di la corona",
+      "price": "1"
+    },
+    {
+      "label": "Masa tradicizionalle",
+      "description": "Li amore di la corona",
+      "price": "1"
+    },
+    {
+      "label": "Masa tradicizionalle",
+      "description": "Li amore di la corona",
+      "price": "1"
+    }
+  ],
+  "sizing": [
+    {
+      "label": "Masa tradicizionalle",
+      "description": "Li amore di la corona",
+      "price": "1"
+    },
+    {
+      "label": "Masa tradicizionalle",
+      "description": "Li amore di la corona",
+      "price": "1"
+    },
+    {
+      "label": "Masa tradicizionalle",
+      "description": "Li amore di la corona",
+      "price": "1"
+    }
+  ],
+  "topping": [
+    {
+      "label": "Masa tradicizionalle",
+      "description": "Li amore di la corona",
+      "price": "1"
+    },
+    {
+      "label": "Masa tradicizionalle",
+      "description": "Li amore di la corona",
+      "price": "1"
+    },
+    {
+      "label": "Masa tradicizionalle",
+      "description": "Li amore di la corona",
+      "price": "1"
+    },
+    {
+      "label": "Masa tradicizionalle",
+      "description": "Li amore di la corona",
+      "price": "1"
+    },
+    {
+      "label": "Masa tradicizionalle",
+      "description": "Li amore di la corona",
+      "price": "1"
+    }
+  ]
+}

@@ -1,4 +1,23 @@
 const isJqueryEnabled = window.jQuery;
+/*
+ * eldelbar things
+ *
+ *
+ */
+let text = "";
+text += "hola";
+const g = 9.813216;
+//g = 124; PUM
+let a = 123;
+let b = "123";
+if (a == b) {
+    console.log("same value");
+}
+if (a === b) {
+    console.log("same value & type");
+}
+
+//biconditionals
 
 /**
  *  how can i get an element?
@@ -12,6 +31,7 @@ function getElementById(id = "myId") {
         return document.getElementById(id);
     }
 }
+
 //let myvalue = getElementById("yuhu");
 //getElementById("yuhu").innerHtml = "toma castaña"
 /**
@@ -35,8 +55,12 @@ function writeElement(element = window.document.body, content = "") {
 function getData(url = "http://dummy.restapiexample.com/api/v1/employees", whatToDoWithElement) {
     try {
         fetch(url)
-            .then(data => data.json())
+            .then(data => {
+                console.log(data);
+                return data.json();
+            })
             .then(response => {
+                console.log(response);
                 //check the url response. it has data values
                 response.data.map(item => {
                     whatToDoWithElement(item);
@@ -46,6 +70,7 @@ function getData(url = "http://dummy.restapiexample.com/api/v1/employees", whatT
         console.error("MEK!" + e);
     }
 }
+
 /**
  *
  * @param name
@@ -53,7 +78,7 @@ function getData(url = "http://dummy.restapiexample.com/api/v1/employees", whatT
  * @param salary
  * @returns {string}
  */
-function printTemplate(name,age,salary) {
+function printTemplate(name, age, salary) {
     return `
     <div class="row">        
         <div><span style="min-width: 100px">Name:</span> ${name}</div>
@@ -70,8 +95,10 @@ function howtoUseFetch() {
     window.content = "";
     getData(function (i) {
         console.log(i);
-        window.content += printTemplate(i.employee_name,i.employee_age,i.employee_salary);
+        window.content += printTemplate(i.employee_name, i.employee_age, i.employee_salary);
     });
     console.log(window.content);
 }
 
+//https://medium.com/webpack/webpack-bits-learn-and-debug-webpack-with-chrome-dev-tools-da1c5b19554
+export {howtoUseFetch}

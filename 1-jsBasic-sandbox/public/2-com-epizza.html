@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- made by berto -->
+    <meta charset="UTF-8">
+    <title>COM-ePizza. Ista in il forno!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body class="container">
+<header class="row">
+    <div class="col-md-3">
+        <img src="./img/epizza-icon.png" alt="epizza" style="width: 120px!important;height: 120px!important;">
+    </div>
+    <h1 class="col-md-6">La corona ista in il forno!</h1>
+</header>
+<main class="row">
+    <aside class="col-md-3" id="menuBox"></aside>
+    <div class="col-md-9">
+        <img src="./img/pizzaaDraw.png" alt="le pizza">
+        <h3>Su selección:</h3>
+        <div id="selectionBox"></div>
+    </div>
+</main>
+<script src="../src/epizza/epizzaApp.js"></script>
+<script>
+    epizzaApp();
+</script>
+</body>
+</html>
